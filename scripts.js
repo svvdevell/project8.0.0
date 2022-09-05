@@ -21,3 +21,27 @@
 
 // sumArr(1,223,53444,77,34,67,9);
 
+// 2 
+function createCalc(x) {
+    let result = x;
+    return {
+        sum : function(y) {
+            return result = result + y;
+        },
+        mult : function(y) {
+            return result = result * y;
+        },
+        min : function(y) {
+            return result = result - y;
+        },
+        div : function(y) {
+            return result = result / y;
+        },
+    };
+}
+
+const calc = createCalc(10);
+console.log(calc.sum(5));
+console.log(calc.mult(10));
+console.log(calc.min(40));
+console.log(calc.div(10));
